@@ -6,6 +6,7 @@
 }
 
 
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: #f4f6f9;
@@ -13,43 +14,31 @@ body {
   line-height: 1.7;
 }
 
-h1 {
-  font-size: 2rem;
-  font-weight: 700;
-}
+h1 { font-size: 2rem; font-weight: 700; }
+h2 { font-size: 1.4rem; font-weight: 600; color: #1a237e; margin-bottom: 14px; }
+h3 { font-size: 1.1rem; font-weight: 600; color: #283593; margin-bottom: 10px; }
+p  { font-size: 1rem; margin-bottom: 8px; }
 
-h2 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #1a237e;
-  margin-bottom: 14px;
-}
 
-h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #283593;
-  margin-bottom: 10px;
-  
-}
 
-p {
-  font-size: 1rem;
-  margin-bottom: 8px;
-}
-
- 
 header {
   background-color: #1a237e;
   color: white;
   padding: 24px 40px;
-  text-align: center;
 }
 
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 .header-content {
-  display: inline-block;
-  vertical-align: middle;
-  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
 }
 
 .profile-img {
@@ -57,14 +46,9 @@ header {
   width: 80px;
   border-radius: 50%;
   border: 3px solid white;
-  vertical-align: middle;
-  margin-right: 16px;
-  display: inline-block;
 }
 
 header h1 {
-  display: inline-block;
-  vertical-align: middle;
   color: white;
 }
 
@@ -72,42 +56,39 @@ header h1 {
   margin-top: 10px;
   font-size: 1rem;
   color: #c5cae9;
+  text-align: center;
 }
-
 
 
 nav {
   background-color: #283593;
   padding: 12px 40px;
-  text-align: center;
   position: sticky;
   top: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 nav a {
-  display: inline-block;
   color: #e8eaf6;
   text-decoration: none;
   padding: 8px 18px;
-  margin: 0 4px;
   border-radius: 20px;
   font-size: 0.95rem;
 }
 
-nav a:hover {
-  background-color: #3949ab;
-  color: white;
-}
-
-nav a:active {
-  background-color: #1a237e;
-  color: white;
-}
+nav a:hover  { background-color: #3949ab; color: white; }
+nav a:active { background-color: #1a237e; color: white; }
 
 
-main {
-  padding: 40px;
-}
+
+main { padding: 40px; }
+
+
 
 section {
   background-color: white;
@@ -117,15 +98,11 @@ section {
   border-left: 4px solid #3949ab;
 }
 
-section p {
-  color: #444;
-}
+section p { color: #444; }
 
 
 
-article {
- padding: 16px 0 16px 20px;
-}
+article { padding: 16px 0 16px 20px; }
 
 .article-divider {
   border: none;
@@ -134,10 +111,23 @@ article {
 }
 
 
-#programming, #webdev, #business {
-  margin-bottom: 28px;
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 16px;
 }
 
+
+#programming,
+#webdev,
+#business {
+  background-color: #f4f6f9;
+  border-radius: 8px;
+  padding: 16px;
+  border-top: 3px solid #3949ab;
+}
 
 
 table {
@@ -160,12 +150,23 @@ td {
   color: #444;
 }
 
-tr:nth-of-type(even) {
-  background-color: #e8eaf6;
+
+tr:nth-of-type(even) { background-color: #e8eaf6; }
+tr:hover             { background-color: #c5cae9; }
+
+
+
+section a {
+  color: #3949ab;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid #3949ab;
+  padding-bottom: 2px;
 }
 
-tr:hover {
-  background-color: #c5cae9;
+section a:hover {
+  color: #1a237e;
+  border-bottom-color: #1a237e;
 }
 
 
